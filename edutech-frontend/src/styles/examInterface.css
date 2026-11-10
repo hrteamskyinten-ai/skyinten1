@@ -1,0 +1,555 @@
+.root-theme {
+  --dark: #0b1220;
+  --panel: #0f1720;
+  --panel-2: #122231;
+  --accent: #1976d2;
+  --accent-2: #0f9d58;
+}
+
+.exam-root {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #071428 0%, #082433 100%);
+  color: #e6eef6;
+  padding-bottom: 20px;
+}
+
+.exam-root * {
+  box-sizing: border-box;
+}
+
+
+
+/* Exam Instructions */
+
+.instructions-root {
+  background: linear-gradient(180deg, #071428 0%, #082433 100%);
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.instructions-container {
+  max-width: 850px;
+  width: 100%;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.instructions-container h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.instructions-container h2 {
+  margin-top: 25px;
+  font-size: 22px;
+}
+
+.instructions-container ul {
+  margin-top: 10px;
+  padding-left: 22px;
+}
+
+.instructions-container li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.start-btn {
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.start-btn:hover {
+  background: #000;
+}
+
+
+/* Exam Interface */
+
+.topbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  background: rgba(8,12,20,0.85);
+  color: var(--panel-foreground, #fff);
+  padding: 12px 22px;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.topbar {
+  background: linear-gradient(90deg, rgba(10,20,35,0.95), rgba(14,34,55,0.95));
+  box-shadow: 0 6px 30px rgba(2,6,23,0.55);
+  padding: 18px 28px;
+  border-radius: 0 0 12px 12px;
+}
+
+.title {
+  justify-self: start;
+  font-size: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.center-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  gap: 8px;
+}
+
+.section-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.section-label {
+  font-weight: 700;
+  color: white;
+}
+
+.boxes {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.num-box {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #dbeafe;
+}
+
+.num-box.active {
+  background: var(--accent);
+  color: white;
+  border-color: rgba(255,255,255,0.06);
+}
+
+.num-box.answered {
+  background: var(--accent-2);
+  color: white;
+}
+
+.timer {
+  justify-self: end;
+  background: #dcdcdc;
+  color: black;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+
+.content {
+  display: flex;
+  flex: 1;
+}
+
+.content { gap: 24px; padding: 24px 36px; }
+
+.left {
+  flex: 0 0 48%;
+  padding: 28px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.02);
+  box-shadow: 0 8px 30px rgba(2,6,23,0.35);
+  max-height: calc(100vh - 160px);
+  overflow: auto;
+}
+
+/* smooth width transition when resizing */
+.left { transition: width 160ms cubic-bezier(.2,.9,.2,1); }
+
+.question-text {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.right {
+  flex: 0 0 52%;
+  padding: 20px;
+  background: rgba(15,23,32,0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.02);
+  box-shadow: 0 8px 30px rgba(2,6,23,0.45);
+  max-height: calc(100vh - 160px);
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  color:black;
+  padding: 12px;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.option.selected {
+  border-color: #2f9eaa;
+}
+
+.controls {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.control-btn {
+  background: rgba(255,255,255,0.04);
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.06);
+  font-weight: 700;
+  color: #e6eef6;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.control-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.4); }
+
+.control-btn:disabled {
+  opacity: 0.5;
+}
+
+
+
+/*CODING SECTION — EXTRA CSS */
+
+
+.left h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.left h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: vertical;
+  outline: none;
+}
+
+textarea:focus {
+  border-color: #2f9eaa;
+  box-shadow: 0 0 4px rgba(47, 158, 170, 0.5);
+}
+
+.code-output {
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 6px;
+  border: 2px solid #ccc;
+  font-family: monospace;
+  margin-top: 12px;
+}
+
+/* Improved code editor styling */
+.code-textarea {
+  border: 2px solid #2b2b2b;
+  background: #0f1720;
+  color: #e6eef6;
+  min-height: 320px;
+  padding: 14px;
+  border-radius: 8px;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* Lightweight editor wrapper with line numbers */
+.code-editor {
+  display: flex;
+  align-items: flex-start;
+}
+
+.line-numbers {
+  user-select: none;
+  padding: 12px 8px;
+  background: rgba(0,0,0,0.12);
+  border-radius: 6px 0 0 6px;
+  color: rgba(255,255,255,0.6);
+  font-family: monospace;
+  font-size: 13px;
+  text-align: right;
+}
+
+.line-number {
+  height: 20px;
+  line-height: 20px;
+  padding: 0 6px;
+}
+
+.code-editor .code-textarea {
+  border-radius: 0 6px 6px 0;
+  padding-left: 14px;
+}
+
+/* Splitter between panels */
+.splitter {
+  width: 10px;
+  cursor: col-resize;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 6px;
+  margin: 0 8px;
+  align-self: stretch;
+}
+.splitter:hover { background: rgba(255,255,255,0.04) }
+/* center the handle vertically inside the splitter */
+.splitter { display: flex; align-items: center; justify-content: center; }
+
+/* Align Monaco internal margin/padding so line numbers match text */
+.editor-wrapper .monaco-editor .margin, .editor-wrapper .monaco-editor .view-lines {
+  padding-top: 8px !important;
+}
+
+/* Ensure editor container fills the right panel */
+.editor-wrapper { flex: 1 1 auto; min-height: 320px }
+
+.splitter-handle {
+  width: 28px;
+  height: 28px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.splitter-handle::before {
+  content: '';
+  width: 3px;
+  height: 16px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 2px;
+  box-shadow: 0 4px 0 rgba(255,255,255,0.04), 0 -4px 0 rgba(255,255,255,0.04);
+}
+.splitter:hover .splitter-handle::before { background: rgba(255,255,255,0.12); box-shadow: 0 4px 0 rgba(255,255,255,0.08), 0 -4px 0 rgba(255,255,255,0.08); }
+
+/* show a small emoji inside the handle; enlarge while dragging */
+.splitter-handle {
+  font-size: 12px; /* very small by default */
+  color: rgba(255,255,255,0.9);
+  transition: transform 120ms ease, font-size 120ms ease, background 120ms ease;
+  cursor: col-resize;
+  border-radius: 8px;
+  background: transparent;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.splitter-handle::before { display: none; }
+.splitter:hover .splitter-handle { background: rgba(255,255,255,0.02); }
+.splitter-handle.dragging { transform: scale(1.2); font-size: 16px; background: rgba(255,255,255,0.04); box-shadow: 0 8px 28px rgba(0,0,0,0.5); }
+
+/* Topbar drag tip */
+.drag-tip {
+  justify-self: center;
+  font-size: 13px;
+  color: rgba(235,241,255,0.9);
+  background: rgba(255,255,255,0.02);
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+/* place the tip visually close under the section row */
+.center-header .drag-tip { margin-top: 8px; }
+
+/* Editor wrapper to ensure Monaco fills available area */
+.editor-wrapper { display: flex; flex-direction: column; gap: 8px; min-height: 320px; }
+
+/* make the optional run-input smaller when placed under the editor */
+.editor-wrapper + div textarea { height: 36px; }
+
+.right h3 { margin: 0 0 6px 0; }
+
+.timer { background: rgba(255,255,255,0.03); color: #e6eef6; padding: 8px 14px; border-radius: 10px; font-weight: 800; border: 1px solid rgba(255,255,255,0.04); box-shadow: 0 6px 18px rgba(3,10,20,0.45) }
+.left::-webkit-scrollbar { width: 10px }
+.left::-webkit-scrollbar-track { background: transparent }
+.left::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.06); border-radius: 8px; border: 2px solid rgba(0,0,0,0.15) }
+.left { scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.06) transparent }
+
+.left .question-text { white-space: pre-wrap; }
+
+/* Make controls sticky at bottom inside right panel */
+.right .controls { margin-top: auto; position: sticky; bottom: 18px; background: linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.02)); padding-top: 12px }
+
+.run-btn { background: #0f9d58; color: white; border: none }
+.submit-btn { background: #1976d2; color: white; border: none }
+.exit-btn { background: #e04b4b; color: white; border: none }
+
+.result-panel, .test-results-panel {
+  margin-top: 20px;
+  background: rgba(255,255,255,0.02);
+  padding: 12px;
+  border-radius: 8px;
+  color: #e6eef6;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.result-pre { white-space: pre-wrap; color: #dbeafe; background: transparent; border: none; padding: 6px 0 }
+.result-pre.error { color: #ffb4b4 }
+
+.test-results-list { list-style: none; padding: 0; margin: 0 }
+.test-case { display: flex; justify-content: space-between; padding: 8px 6px; border-bottom: 1px solid rgba(255,255,255,0.02) }
+.test-case.pass { background: rgba(15,80,60,0.06) }
+.test-case.fail { background: rgba(120,30,30,0.04) }
+.error-text { color: #ffb4b4 }
+
+.run-btn { background: var(--accent-2); color: white; border: none }
+.submit-btn { background: var(--accent); color: white; border: none }
+.exit-btn { background: #e04b4b; color: white; border: none }
+
+.test-results ul { margin: 0; padding: 0; }
+.test-results li { list-style: none; }
+
+/* Emoji status */
+.test-status-emoji { font-size: 18px; margin-right: 8px }
+
+/* Admin hackathon results table */
+.hack-results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+.hack-results-table th, .hack-results-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  color: #fff;
+}
+.hack-results-table thead th { text-align: left; }
+
+.right .controls {
+  justify-content: flex-end;
+}
+
+.right .controls button {
+  min-width: 120px;
+}
+
+
+/* Language Selector */
+
+.language-select {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+}
+
+.language-select label {
+  font-size: 15px;
+}
+
+.language-select select {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 2px solid #ccc;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+
+.language-select select:focus {
+  border-color: #2f9eaa;
+}
+
+
+/* Test Case Status */
+
+.test-running {
+  font-weight: 600;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+.test-results {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.test-case {
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  animation: slideIn 0.3s ease forwards;
+}
+
+.test-case.pass {
+  background: #e6f7f0;
+  color: #067647;
+  border-left: 4px solid #0f9d58;
+}
+
+.test-case.fail {
+  background: #fdeaea;
+  color: #b42318;
+  border-left: 4px solid #d92d20;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px){
+  .small_screen_popup{
+    padding: 20px;
+  }
+}

@@ -1,0 +1,37 @@
+.verifyMailContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 400px;
+    height: 250px;
+    border: 0.5px solid;
+    border-radius: 20px;
+    margin: 10% 35%;
+}
+
+.otpSubmit{
+    display: flex;
+    width: 300px;
+}
+
+.inputs{
+    width: 30px;
+    height: 30px;
+}
+
+.submitBtn{
+    width: 100px    ;
+    height: auto;
+    padding: 7px;
+    margin-top: 10%;
+    border-radius: 10%;
+    background-color: white;
+    color: #5749F4;
+    border: 1px solid;
+    align-items: center;
+}
+
+.submitBtn:hover{
+    color: white ;
+    background-color: #5749F4;
+}

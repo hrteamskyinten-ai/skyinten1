@@ -1,0 +1,187 @@
+/* --- Hero Section --- */
+.contact-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.contact-banner img {
+  position: absolute;
+  top: -40px; 
+  left: 0;
+  width: 100%;
+  height: calc(100% + 40px); 
+  object-fit: cover;
+}
+
+.contact-banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.contact-banner-overlay h4 {
+  font-size: 4.5rem;
+  color: #cbcddb;
+}
+
+.scroll-down-btn {
+  background: transparent;
+  border: 1.5px solid white;
+  color: white;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scroll-down-btn:hover {
+  background: white;
+  color: #0b1222;
+  transform: translateY(3px);
+}
+
+
+
+
+@media (max-width: 1024px) {
+  .scroll-down-btn {
+    font-size: 0.6rem;
+    padding: 4px 10px;
+    margin-top: 6rem;
+  }
+
+  .contact-banner {
+    height: 70vh; 
+  }
+
+  .contact-banner-img {
+    height: calc(100% + 10px);
+    object-position: center top; 
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-banner {
+    height: 95vh;
+  }
+}
+
+@media (max-width: 380px) {
+    .contact-banner {
+    height: 95vh; 
+  }
+}
+
+
+
+/* --- ContactForm Section --- */
+.contact-section {
+  background: #e2e5e7;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.contact-container {
+  background: #2d3a8c;
+  color: #fff;
+  border: 2px solid #3fa9f5;
+  border-radius: 10px;
+  padding: 50px 60px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.contact-container:hover {
+  transform: translateY(-4px);
+}
+
+.contact-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-container p {
+  font-size: 0.95rem;
+  color: #d0d6f9;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #3fa9f5;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #a3b3e3;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #5cc0ff;
+}
+
+.contact-form button {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #3fa9f5;
+  padding: 10px 25px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  align-self: center;
+}
+
+.contact-form button:hover {
+  background: #3fa9f5;
+  color: #0a1a3d;
+}
+
+
+
+@media (max-width: 600px) {
+  .contact-container {
+    padding: 40px 30px;
+  }
+
+  .contact-container h2 {
+    font-size: 1.7rem;
+  }
+}

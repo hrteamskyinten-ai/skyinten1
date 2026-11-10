@@ -1,0 +1,99 @@
+.community-wrapper {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.community-header {
+  text-align: center;
+  padding: 40px 20px;
+  background: #eef8ff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.community-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.community-header p {
+  color: #444;
+  margin: 10px 0 20px;
+  font-size: 17px;
+}
+
+.ask-btn {
+  padding: 12px 26px;
+  border: none;
+  border-radius: 8px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.ask-btn:hover {
+  background: #005fcc;
+}
+
+.community-categories h2,
+.community-posts h2 {
+  margin-top: 40px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.category-card {
+  background: #ffffff;
+  padding: 18px 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.category-card h3 {
+  margin: 0 0 8px;
+}
+
+.category-card p {
+  color: #555;
+  font-size: 15px;
+}
+
+.post-card {
+  background: #fff;
+  padding: 18px 22px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+}
+
+.post-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.post-meta {
+  color: #666;
+  font-size: 14px;
+}

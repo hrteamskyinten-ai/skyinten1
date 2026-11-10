@@ -1,0 +1,402 @@
+/* Module Assignment Form Styles */
+
+.module-assignment-form {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 10px;
+  padding: 30px;
+  color: #fff;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ff9800;
+}
+
+.form-header h2 {
+  font-size: 24px;
+  margin: 0;
+  color: #fff;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #ff9800;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: rgba(255, 152, 0, 0.1);
+  border-radius: 50%;
+  transform: scale(1.1);
+}
+
+/* MCQ Form */
+.mcq-form,
+.coding-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #ff9800;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 152, 0, 0.3);
+  border-radius: 6px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  /* background: rgba(255, 255, 255, 0.1); */
+  background: white;
+  color: black;
+  border-color: #ff9800;
+  box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Option Input Group for MCQ */
+.option-input-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.option-input-group input[type="text"] {
+  flex: 1;
+}
+
+.option-input-group input[type="radio"] {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  accent-color: #ff9800;
+}
+
+/* Form Row */
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Array Items */
+.array-item,
+.example-item,
+.testcase-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: flex-start;
+}
+
+.array-item input,
+.example-item input,
+.example-item textarea,
+.testcase-item textarea {
+  flex: 1;
+}
+
+.remove-btn,
+.delete-btn {
+  background: rgba(255, 68, 68, 0.15);
+  border: 1px solid rgba(255, 68, 68, 0.3);
+  color: #ff4444;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  margin-top: 2px;
+}
+
+.remove-btn:hover,
+.delete-btn:hover {
+  background: rgba(255, 68, 68, 0.25);
+  border-color: #ff4444;
+}
+
+.add-btn {
+  background: rgba(76, 175, 80, 0.15);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  color: #4caf50;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.add-btn:hover {
+  background: rgba(76, 175, 80, 0.25);
+  border-color: #4caf50;
+}
+
+/* Buttons */
+.submit-btn {
+  background: linear-gradient(135deg, #ff9800 0%, #fb8200 100%);
+  color: #000;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 152, 0, 0.3);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* MCQ List */
+.mcq-list,
+.questions-list {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 2px solid rgba(255, 152, 0, 0.2);
+}
+
+.mcq-list h3,
+.questions-list h3 {
+  color: #ff9800;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mcq-items,
+.questions-items {
+  display: grid;
+  gap: 15px;
+}
+
+/* MCQ Item */
+.mcq-item,
+.question-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 152, 0, 0.2);
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.mcq-item:hover,
+.question-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 152, 0, 0.4);
+}
+
+.mcq-content,
+.question-content {
+  flex: 1;
+}
+
+.mcq-question {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.question-item h4 {
+  font-size: 16px;
+  margin: 0 0 8px 0;
+  color: #fff;
+}
+
+.question-item p {
+  font-size: 13px;
+  color: #ccc;
+  margin: 0 0 10px 0;
+}
+
+.mcq-options {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.mcq-option {
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  font-size: 13px;
+  color: #ccc;
+}
+
+.mcq-option.correct {
+  background: rgba(76, 175, 80, 0.1);
+  border-color: rgba(76, 175, 80, 0.3);
+  color: #4caf50;
+}
+
+.correct-badge {
+  margin-left: 8px;
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.mcq-meta,
+.question-meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.difficulty-badge,
+.language-badge,
+.testcase-count {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.difficulty-badge {
+  background: rgba(255, 152, 0, 0.15);
+  color: #ff9800;
+  border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+.difficulty-badge[data-difficulty="hard"] {
+  background: rgba(255, 68, 68, 0.15);
+  color: #ff4444;
+  border-color: rgba(255, 68, 68, 0.3);
+}
+
+.difficulty-badge[data-difficulty="easy"] {
+  background: rgba(76, 175, 80, 0.15);
+  color: #4caf50;
+  border-color: rgba(76, 175, 80, 0.3);
+}
+
+.language-badge {
+  background: rgba(100, 200, 255, 0.15);
+  color: #64c8ff;
+  border: 1px solid rgba(100, 200, 255, 0.3);
+}
+
+.testcase-count {
+  background: rgba(156, 39, 176, 0.15);
+  color: #9c27b0;
+  border: 1px solid rgba(156, 39, 176, 0.3);
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #ff6b6b;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 8px;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: rgba(255, 107, 107, 0.1);
+  border-radius: 6px;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .module-assignment-form {
+    padding: 20px;
+  }
+
+  .form-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .option-input-group,
+  .array-item,
+  .example-item,
+  .testcase-item {
+    flex-direction: column;
+  }
+
+  .mcq-item,
+  .question-item {
+    flex-direction: column;
+  }
+
+  .mcq-options {
+    max-height: 150px;
+    overflow-y: auto;
+  }
+}
