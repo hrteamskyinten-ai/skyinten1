@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { AppContext } from "../context/Appcontext";
 import "../styles/payment.css";
 
 function loadRazorpayScript() {
@@ -17,6 +18,7 @@ function loadRazorpayScript() {
 export default function Payment() {
 	const location = useLocation();
 	const navigate = useNavigate();
+	const { backendUrl } = useContext(AppContext);
 	const { courseName = "Unknown Course", price = 0, courseId = null } = location.state || {};
 	const [loading, setLoading] = useState(false);
 
@@ -42,7 +44,7 @@ export default function Payment() {
 		}
 
 		try {
-			const resp = await fetch("http://localhost:4000/api/payment/order", {
+			const resp = await fetch(`${backendUrl}/api/payment/order`, {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify({ amount: price }),
@@ -64,7 +66,7 @@ export default function Payment() {
 				order_id: orderData.id,
 				handler: async function (response) {
 					// verify payment on server
-					const verifyResp = await fetch("http://localhost:4000/api/payment/verify", {
+					const verifyResp = await fetch(`${backendUrl}/api/payment/verify`, {
 						method: "POST",
 						headers: { "Content-Type": "application/json" },
 						body: JSON.stringify({
